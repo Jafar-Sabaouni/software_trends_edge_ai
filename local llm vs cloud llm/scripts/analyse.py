@@ -1,3 +1,4 @@
+
 import json
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -55,6 +56,9 @@ def analyze_results():
     else:
         df_no_errors = df.copy()
     
+    # Get model names dynamically and sort them to ensure consistent order
+    model_names = sorted(df['model'].unique().tolist())
+    
     summary = df_no_errors.pivot_table(
         index='prompt_id',
         columns='model',
@@ -67,19 +71,20 @@ def analyze_results():
         os.makedirs(CHARTS_DIR)
 
     # Latency Comparison
-    plt.figure(figsize=(10, 6))
-    summary['latency_ms'].plot(kind='bar', ax=plt.gca())
-    plt.title('Latency Comparison (ms)')
-    plt.ylabel('Latency (ms)')
-    plt.xticks(rotation=45)
-    plt.tight_layout()
-    plt.savefig(os.path.join(CHARTS_DIR, "latency_comparison.png"))
-    print(f"\nSaved latency comparison chart to {CHARTS_DIR}/latency_comparison.png")
+    if not summary.empty:
+        plt.figure(figsize=(10, 6))
+        summary['latency_ms'].plot(kind='bar', ax=plt.gca())
+        plt.title('Latency Comparison (ms)')
+        plt.ylabel('Latency (ms)')
+        plt.xticks(rotation=45)
+        plt.tight_layout()
+        plt.savefig(os.path.join(CHARTS_DIR, "latency_comparison.png"))
+        print(f"\nSaved latency comparison chart to {CHARTS_DIR}/latency_comparison.png")
 
     # Tokens per Second Comparison
-    plt.figure(figsize=(10, 6))
     tps_data = df_no_errors[df_no_errors['tokens_per_second'] > 0]
     if not tps_data.empty:
+        plt.figure(figsize=(10, 6))
         tps_data.pivot(index='prompt_id', columns='model', values='tokens_per_second').plot(kind='bar', ax=plt.gca())
         plt.title('Tokens per Second Comparison')
         plt.ylabel('Tokens/sec')
@@ -96,23 +101,27 @@ def analyze_results():
             grouped_results[prompt_id] = {}
         grouped_results[prompt_id][result['model']] = result.get('response', 'Error: ' + result.get('error', 'Unknown'))
 
+    model1_name = model_names[0] if len(model_names) > 0 else "Model 1"
+    model2_name = model_names[1] if len(model_names) > 1 else "Model 2"
+
     with open(COMPARISON_FILE, "w") as f:
         f.write("# Model Response Comparison\n\n")
         for prompt_id, prompt_data in PROMPTS.items():
             prompt_text = prompt_data['input']
             category = prompt_data['category']
-            gemma_response = grouped_results.get(prompt_id, {}).get('Gemma2', 'Response not found.')
-            gemini_response = grouped_results.get(prompt_id, {}).get('Gemini', 'Response not found.')
+
+            model1_response = grouped_results.get(prompt_id, {}).get(model1_name, 'Response not found.')
+            model2_response = grouped_results.get(prompt_id, {}).get(model2_name, 'Response not found.')
 
             # Sanitize for Markdown table
-            gemma_response = gemma_response.replace('|', '\\|').replace('\n', '<br>')
-            gemini_response = gemini_response.replace('|', '\\|').replace('\n', '<br>')
+            model1_response = model1_response.replace('|', '\\|').replace('\n', '<br>')
+            model2_response = model2_response.replace('|', '\\|').replace('\n', '<br>')
 
             f.write(f"### Prompt {prompt_id}: {category}\n")
             f.write(f"**Prompt:** `{prompt_text.strip()}`\n\n")
-            f.write("| Gemma2 Response | Gemini Response |\n")
+            f.write(f"| {model1_name} Response | {model2_name} Response |\n")
             f.write("| :--- | :--- |\n")
-            f.write(f"| {gemma_response} | {gemini_response} |\n\n")
+            f.write(f"| {model1_response} | {model2_response} |\n\n")
             f.write("---\n\n")
     
     print(f"Saved side-by-side comparison to {COMPARISON_FILE}")

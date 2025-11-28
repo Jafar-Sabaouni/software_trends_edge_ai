@@ -52,8 +52,8 @@ def run_gemma_test(prompt_id, prompt):
     start_time = time.time()
     
     try:
-        # Assuming Ollama is running and has the "gemma:2b" model
-        response = ollama.chat(model='gemma:2b', messages=[{'role': 'user', 'content': prompt}])
+        # Assuming Ollama is running and has the "gemma3:4b" model
+        response = ollama.chat(model='gemma3:4b', messages=[{'role': 'user', 'content': prompt}])
         
         latency_ms = (time.time() - start_time) * 1000
         
@@ -61,7 +61,7 @@ def run_gemma_test(prompt_id, prompt):
         tokens_per_second = response.get('eval_count', 0) / response.get('eval_duration', 1) * 1_000_000_000
         
         result = {
-            "model": "Gemma2",
+            "model": "Gemma3 (4B)",
             "prompt_id": prompt_id,
             "latency_ms": latency_ms,
             "tokens_per_second": tokens_per_second,
@@ -75,7 +75,7 @@ def run_gemma_test(prompt_id, prompt):
 
     except Exception as e:
         return {
-            "model": "Gemma2",
+            "model": "Gemma3 (4B)",
             "prompt_id": prompt_id,
             "error": str(e)
         }
@@ -134,7 +134,7 @@ def main():
 
     results = []
 
-    print("Running tests on Gemma 2 (Local)...\n")
+    print("Running tests on Gemma 3 (4B Local)...\n")
     for prompt_id, prompt_data in PROMPTS.items():
         print(f"  Running prompt: {prompt_id} ({prompt_data['category']})")
         result = run_gemma_test(prompt_id, prompt_data['input'])

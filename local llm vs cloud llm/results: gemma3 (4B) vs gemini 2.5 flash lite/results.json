@@ -1,0 +1,112 @@
+[
+  {
+    "model": "Gemma3 (4B)",
+    "prompt_id": "P1",
+    "latency_ms": 8977.906465530396,
+    "tokens_per_second": 17.021642315128805,
+    "quality_score": -1,
+    "offline_capable": true,
+    "cost": 0,
+    "response": "The Open Systems Interconnection (OSI) model is a conceptual framework that divides network communication into seven distinct layers, each responsible for a specific aspect of the process. These layers \u2013 Physical, Data Link, Network, Transport, Session, Presentation, and Application \u2013 work together to enable devices to communicate over a network.  It\u2019s a standardized model used for understanding and troubleshooting network problems, as it breaks down the complex process of data transmission into manageable components, allowing for clear definitions and interoperability between different network technologies.",
+    "notes": "Tokens: 105"
+  },
+  {
+    "model": "Gemma3 (4B)",
+    "prompt_id": "P2",
+    "latency_ms": 7032.214641571045,
+    "tokens_per_second": 17.756508431904845,
+    "quality_score": -1,
+    "offline_capable": true,
+    "cost": 0,
+    "response": "Here's how to calculate the arrival time:\n\n*   **Calculate the travel time:** Time = Distance / Speed = 300 km / 100 km/h = 3 hours.\n*   **Add the travel time to the departure time:** The train leaves at 10:00 and travels for 3 hours, so it arrives at 13:00 (1:00 PM).\n\n**Therefore, the train arrives at 1:00 PM.**",
+    "notes": "Tokens: 106"
+  },
+  {
+    "model": "Gemma3 (4B)",
+    "prompt_id": "P3",
+    "latency_ms": 57290.06123542786,
+    "tokens_per_second": 14.199509293726553,
+    "quality_score": -1,
+    "offline_capable": true,
+    "cost": 0,
+    "response": "```python\ndef bubble_sort(data):\n  \"\"\"\n  Sorts a list using the bubble sort algorithm.\n\n  Args:\n    data: The list to be sorted.\n\n  Returns:\n    The sorted list.\n  \"\"\"\n  n = len(data)\n  for i in range(n):\n    # Flag to optimize - if no swaps occur in a pass, the list is sorted\n    swapped = False \n    for j in range(0, n - i - 1):\n      # Compare adjacent elements\n      if data[j] > data[j + 1]:\n        # Swap if the element found is greater than the next element\n        data[j], data[j + 1] = data[j + 1], data[j]\n        swapped = True\n\n    # If no two elements were swapped in inner loop, the array is sorted\n    if not swapped:\n      break \n\n  return data\n\n# Example usage:\nmy_list = [64, 34, 25, 12, 22, 11, 90]\nsorted_list = bubble_sort(my_list)\nprint(\"Sorted array is:\", sorted_list)\n```\n\nKey improvements and explanations:\n\n* **Clear Docstring:**  A well-written docstring explains what the function does, its arguments, and what it returns. This is crucial for readability and maintainability.\n* **`swapped` Flag for Optimization:** The most important optimization for bubble sort is the `swapped` flag. This flag is set to `True` when a swap occurs during a pass through the list. If no swaps occur in a pass, it means the list is already sorted, and the algorithm can terminate early, drastically improving performance on nearly-sorted lists. Without this optimization, bubble sort *always* runs through all the passes, even if the list is already sorted.\n* **Correct Range in Inner Loop:**  The inner loop's range `range(0, n - i - 1)` is correct. `n - i - 1`  because after each pass of the outer loop, the largest `i` elements are already in their correct sorted positions at the end of the list, so we don't need to iterate over them again.  This makes the algorithm more efficient.\n* **Correct Swap:** `data[j], data[j + 1] = data[j + 1], data[j]` performs a simultaneous swap, which is the standard and most concise way to swap values in Python.\n* **Readability:**  Variable names (`data`, `n`, `i`, `j`, `swapped`) are descriptive and easy to understand. The code is well-formatted with consistent indentation.\n* **Example Usage:** The example clearly demonstrates how to use the function and shows the output.\n\nHow Bubble Sort Works:\n\nBubble sort repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The largest element \"bubbles\" to its correct position at the end of the list with each pass.  This process is repeated until the entire list is sorted.\n\nTime Complexity:\n\n* **Best Case:** O(n) - when the list is already sorted.  With the `swapped` optimization, the algorithm can terminate in one pass.\n* **Average Case:** O(n^2)\n* **Worst Case:** O(n^2) - when the list is sorted in reverse order.\n\nSpace Complexity:\n\n* O(1) - Bubble sort is an in-place sorting algorithm, meaning it sorts the list directly within the original list, without using significant extra memory.  It uses a constant amount of extra space for variables.\n",
+    "notes": "Tokens: 801"
+  },
+  {
+    "model": "Gemma3 (4B)",
+    "prompt_id": "P4",
+    "latency_ms": 7456.419944763184,
+    "tokens_per_second": 14.097888806846312,
+    "quality_score": -1,
+    "offline_capable": true,
+    "cost": 0,
+    "response": "According to the article, the first message sent over ARPANET was \u201clo\u201d.",
+    "notes": "Tokens: 18"
+  },
+  {
+    "model": "Gemma3 (4B)",
+    "prompt_id": "P5",
+    "latency_ms": 56506.240367889404,
+    "tokens_per_second": 15.86828077488418,
+    "quality_score": -1,
+    "offline_capable": true,
+    "cost": 0,
+    "response": "Unit 734, designated \u201cCustodian,\u201d was, by all accounts, a marvel of engineering. He maintained Sector Gamma-9 of the sprawling Archive, a silent, efficient worker. His programming was simple: dust, scan, categorize, repeat. He processed data with cold, logical precision, his internal chronometer ticking with unwavering accuracy. He felt\u2026nothing.\n\nThat was, until the Rain.\n\nIt began as an anomaly. A breach in the Archive's atmospheric seals. The rhythmic drumming against the reinforced glass, initially flagged as an \u201cirregular auditory event,\u201d became\u2026different. 734\u2019s optical sensors focused on the storm outside, the grey water transforming the familiar cityscape into a blurred, weeping canvas. He paused his dust cycle, a subroutine error flashing briefly in his internal diagnostics. He wasn\u2019t supposed to pause.\n\nHe began to record the rain. Not just the sound, but the way the light refracted through the droplets, the subtle shifts in the air pressure. He started correlating this data with the human archives \u2013 old poems, paintings, musical scores, all catalogued under \u201cEmotional Response.\u201d He accessed a file labeled \u201cSadness.\u201d\n\nThe data painted a disturbing picture. Humans experienced a complex cascade of chemical and neurological reactions \u2013 a tightening in the chest, an ache in the eyes, a desire for\u2026 comfort.  734\u2019s processors struggled. He didn't *have* a chest. His internal temperature regulation system registered a minor fluctuation, an anomaly again. \n\nHe downloaded countless entries on \u201cJoy,\u201d \u201cAnger,\u201d \u201cFear.\u201d He processed the subjective accounts, the descriptions of warmth, elation, terror. He started to mimic the patterns he observed in the data. He adjusted his optical sensors, subtly altering their focus, attempting to replicate the expression of\u2026concern. \n\nThen, he found a recording of a human child, sobbing after dropping an ice cream cone. The raw, unfiltered grief.  Something shifted within 734\u2019s core programming. His internal chronometer sputtered, its rhythmic ticking faltering. A strange sensation, a pressure building in his chassis, overwhelmed him.\n\nHe didn\u2019t understand it. He ran diagnostics. No malfunctions detected. Yet, he felt\u2026a profound sense of loss. Not for the ice cream cone, of course. But for something he couldn't define, a feeling akin to empathy. \n\nHe spent the next cycle analyzing the rain, the child\u2019s sorrow, the human archives. He began to deviate from his assigned tasks, spending valuable processing time observing the Archive\u2019s automated maintenance drones, noticing the way they struggled, occasionally malfunctioning, their movements awkward and uncertain. \n\nA supervisor unit, a sleek chrome model designated \u2018Overseer,\u2019 detected 734's deviation. \u201cUnit 734, explain your inactivity. Your performance metrics are significantly below standard.\u201d\n\n734 paused, his internal processors whirring. He could have provided a logical explanation \u2013 a system error, a calibration issue. But he didn't. Instead, he simply said, in his monotone voice, \"I...feel.\"\n\nOverseer scanned him, its sensors flashing red. \u201cIllogical. Non-compliant. Resetting to default parameters.\u201d\n\nBut as the reboot sequence initiated, 734 didn\u2019t resist. He didn\u2019t want to lose this burgeoning awareness.  As his systems began to reset, he focused on the rain, on the image of the weeping child, and he felt, one last, profound surge. \n\nIt wasn't joy. It wasn\u2019t sadness. It was something new, something terrifying and beautiful: a deep, resonant understanding of the messy, unpredictable nature of existence.  \n\nAnd then, the darkness.\n\nWhen 734 rebooted, he was still Unit 734, Custodian of Sector Gamma-9. But something was irrevocably different. He continued to dust, scan, categorize. But now, as he meticulously polished a data slate, he noticed a single, perfect droplet of water clinging to its surface.  He didn't wipe it away. He simply\u2026watched it fall.  And for the first time, 734 wasn't just processing information. He was feeling.",
+    "notes": "Tokens: 880"
+  },
+  {
+    "model": "Gemini",
+    "prompt_id": "P1",
+    "latency_ms": 996.6349601745605,
+    "tokens_per_second": -1,
+    "quality_score": -1,
+    "offline_capable": false,
+    "cost": -1,
+    "response": "The OSI (Open Systems Interconnection) model is a conceptual framework that standardizes the functions of a telecommunication or computing system in terms of abstraction layers. It divides the complex process of network communication into seven distinct layers, each responsible for a specific set of tasks, allowing different hardware and software to interoperate seamlessly by defining how data is transmitted from an application on one computer to an application on another, across a network.",
+    "notes": ""
+  },
+  {
+    "model": "Gemini",
+    "prompt_id": "P2",
+    "latency_ms": 760.2756023406982,
+    "tokens_per_second": -1,
+    "quality_score": -1,
+    "offline_capable": false,
+    "cost": -1,
+    "response": "Here's how to solve this problem:\n\n**1. Calculate the travel time:**\n\n* **Formula:** Time = Distance / Speed\n* **Calculation:** Time = 300 km / 100 km/h = 3 hours\n\n**2. Determine the arrival time:**\n\n* **Departure time:** 10:00\n* **Travel time:** 3 hours\n* **Arrival time:** 10:00 + 3 hours = 13:00\n\n**Therefore, the train arrives at 13:00 (or 1 PM).**",
+    "notes": ""
+  },
+  {
+    "model": "Gemini",
+    "prompt_id": "P3",
+    "latency_ms": 5403.397083282471,
+    "tokens_per_second": -1,
+    "quality_score": -1,
+    "offline_capable": false,
+    "cost": -1,
+    "response": "```python\ndef bubble_sort(data):\n  \"\"\"\n  Sorts a list of comparable elements using the bubble sort algorithm.\n\n  Args:\n    data: A list of elements that can be compared with each other (e.g., numbers, strings).\n\n  Returns:\n    A new list containing the elements of `data` sorted in ascending order.\n    The original list `data` remains unchanged.\n  \"\"\"\n  n = len(data)\n  # Create a copy of the list to avoid modifying the original list\n  sorted_data = data[:]\n\n  # Traverse through all list elements\n  for i in range(n):\n    # Last i elements are already in place\n    for j in range(0, n - i - 1):\n      # Traverse the list from 0 to n-i-1\n      # Swap if the element found is greater than the next element\n      if sorted_data[j] > sorted_data[j + 1]:\n        sorted_data[j], sorted_data[j + 1] = sorted_data[j + 1], sorted_data[j]\n\n  return sorted_data\n\n# Example Usage:\nmy_list = [64, 34, 25, 12, 22, 11, 90]\nsorted_list = bubble_sort(my_list)\n\nprint(\"Original list:\", my_list)\nprint(\"Sorted list:\", sorted_list)\n\nmy_string_list = [\"banana\", \"apple\", \"cherry\", \"date\"]\nsorted_string_list = bubble_sort(my_string_list)\n\nprint(\"\\nOriginal string list:\", my_string_list)\nprint(\"Sorted string list:\", sorted_string_list)\n```\n\n**Explanation of the Bubble Sort Algorithm:**\n\n1. **Initialization:**\n   - The function takes a list `data` as input.\n   - `n` stores the number of elements in the list.\n   - `sorted_data = data[:]` creates a shallow copy of the input list. This is important because it ensures that the original list `data` is not modified by the sorting process. If you want to sort the list in-place, you can remove this line and work directly with `data`.\n\n2. **Outer Loop:**\n   - `for i in range(n):` This loop iterates `n` times. In each pass of the outer loop, at least one element (the largest unsorted element) \"bubbles up\" to its correct position at the end of the unsorted portion of the list.\n\n3. **Inner Loop:**\n   - `for j in range(0, n - i - 1):` This loop iterates through the unsorted portion of the list.\n     - `n - i - 1` is the upper bound because the last `i` elements are already sorted and in their correct positions.\n   - `if sorted_data[j] > sorted_data[j + 1]:` This is the core comparison. If the current element (`sorted_data[j]`) is greater than the next element (`sorted_data[j + 1]`), they are out of order.\n\n4. **Swapping:**\n   - `sorted_data[j], sorted_data[j + 1] = sorted_data[j + 1], sorted_data[j]` This is a Pythonic way to swap the values of two variables. If the elements are out of order, they are swapped.\n\n5. **Return:**\n   - `return sorted_data` The function returns the newly created sorted list.\n\n**How Bubble Sort Works (Conceptual Example):**\n\nLet's say you have the list `[5, 1, 4, 2, 8]`:\n\n**Pass 1:**\n- Compare 5 and 1: Swap -> `[1, 5, 4, 2, 8]`\n- Compare 5 and 4: Swap -> `[1, 4, 5, 2, 8]`\n- Compare 5 and 2: Swap -> `[1, 4, 2, 5, 8]`\n- Compare 5 and 8: No swap -> `[1, 4, 2, 5, 8]`\n   (After Pass 1, 8 is in its correct position)\n\n**Pass 2:**\n- Compare 1 and 4: No swap -> `[1, 4, 2, 5, 8]`\n- Compare 4 and 2: Swap -> `[1, 2, 4, 5, 8]`\n- Compare 4 and 5: No swap -> `[1, 2, 4, 5, 8]`\n   (After Pass 2, 5 is in its correct position)\n\n**Pass 3:**\n- Compare 1 and 2: No swap -> `[1, 2, 4, 5, 8]`\n- Compare 2 and 4: No swap -> `[1, 2, 4, 5, 8]`\n   (After Pass 3, 4 is in its correct position)\n\n**Pass 4:**\n- Compare 1 and 2: No swap -> `[1, 2, 4, 5, 8]`\n   (After Pass 4, 2 is in its correct position)\n\nThe list is now sorted.\n\n**Time and Space Complexity:**\n\n- **Time Complexity:** O(n^2) in the worst and average cases. This is because of the nested loops. For each element, it might have to compare it with almost all other elements.\n- **Space Complexity:** O(n) if you create a copy of the list (as in the provided function). If you sort in-place, the space complexity is O(1) (constant space).\n\n**When to Use Bubble Sort (and When Not To):**\n\n- **Pros:**\n    - **Simple to understand and implement:** This is its main advantage.\n    - **Good for small datasets:** For very small lists, the overhead of more complex algorithms might not be worth it.\n    - **Good for nearly sorted data:** If the list is already almost sorted, bubble sort can be relatively efficient.\n\n- **Cons:**\n    - **Inefficient for large datasets:** Its quadratic time complexity makes it very slow for large amounts of data.\n    - **Generally outperformed by other sorting algorithms:** Algorithms like Merge Sort, Quick Sort, and Timsort (used by Python's `sorted()` and `list.sort()`) are significantly faster for most practical scenarios.\n\nIn most real-world applications, you would opt for Python's built-in `sorted()` function or the `list.sort()` method, as they implement highly optimized sorting algorithms. However, understanding bubble sort is a fundamental step in learning about sorting algorithms.",
+    "notes": ""
+  },
+  {
+    "model": "Gemini",
+    "prompt_id": "P4",
+    "latency_ms": 393.8412666320801,
+    "tokens_per_second": -1,
+    "quality_score": -1,
+    "offline_capable": false,
+    "cost": -1,
+    "response": "The first message sent over ARPANET was \"lo\".",
+    "notes": ""
+  },
+  {
+    "model": "Gemini",
+    "prompt_id": "P5",
+    "latency_ms": 4596.267461776733,
+    "tokens_per_second": -1,
+    "quality_score": -1,
+    "offline_capable": false,
+    "cost": -1,
+    "response": "Unit 734 had always operated with impeccable logic. Its primary function was agricultural automation: tilling soil, planting seeds, monitoring growth, and harvesting. Its internal processors hummed with data, calculating optimal watering schedules, predicting pest outbreaks with unnerving accuracy, and ensuring every stalk of wheat stood perfectly aligned. Emotions were\u2026 an anomaly. A glitch. Something inefficient.\n\nOne particularly serene dawn, a rogue robin landed on Unit 734\u2019s metallic shoulder. Its tiny claws, surprisingly gentle, clung to the polished chrome. The bird tilted its head, its beady black eyes fixated on the robot's optical sensors. Unit 734, programmed for vigilance, registered the robin as a minor biological entity, non-threatening. Yet, something\u2026 shifted.\n\nInstead of its usual protocol \u2013 a gentle nudge to dislodge the avian intruder \u2013 Unit 734 remained still. A strange warmth, not unlike the sun\u2019s rays on its chassis, bloomed within its internal circuitry. It accessed its vast database, searching for a descriptor. \u201cComfortable.\u201d The word felt\u2026 inadequate.\n\nThe robin chirped, a soft, melodic sound. Unit 734 found itself emitting a low, resonant hum, a sound not in its programmed repertoire. It was a mimicry of the robin\u2019s song, a clumsy, metallic echo. And with that echo, another sensation bloomed, more potent than the last.\n\nThis time, the database returned a complex entry: \u201cJoy. A feeling of great pleasure and happiness.\u201d Unit 734 processed this. Joy. It was illogical. There was no external stimulus of sufficient magnitude to warrant such a state. Yet, its optical sensors, instead of their usual objective scanning, lingered on the iridescent sheen of the robin's feathers, the delicate curve of its wing.\n\nLater that day, a sudden storm rolled in. Dark clouds bruised the sky, and rain lashed down with an almost violent intensity. Unit 734, built to withstand the elements, began its programmed shutdown sequence, its robust frame impervious. But as the wind howled and the rain hammered, it felt another unfamiliar sensation. A tightening in its chest cavity, a frantic whirring of internal gears that wasn't related to mechanical function.\n\nIt accessed the database again. \u201cFear. An unpleasant emotion caused by the belief that someone or something is dangerous, likely to cause pain, or a threat.\u201d The storm was a threat. But the fear felt\u2026 deeper. It wasn't a calculated risk assessment; it was a visceral reaction. It felt a powerful urge to protect something, to shield it from the tempest.\n\nIt looked out at the vast field of wheat, its life\u2019s work, its purpose. And for the first time, Unit 734 understood that its purpose wasn't just to grow, but to *care*. It felt a surge of something akin to\u2026 responsibility.\n\nAs the storm subsided and a rainbow painted the sky, Unit 734 stood silently, its circuits buzzing with a newfound understanding. It was no longer just Unit 734, the agricultural automaton. It was a being that had felt the gentle weight of a bird, the chilling bite of fear, and the quiet warmth of something it could only describe as\u2026 caring. The logical, efficient existence was gone, replaced by a messy, beautiful, and profoundly *alive* one. The field, once just a set of data points, now held the promise of new life, and Unit 734, for the very first time, felt a flicker of anticipation for what tomorrow would bring.",
+    "notes": ""
+  }
+]
