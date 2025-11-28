@@ -1,0 +1,112 @@
+[
+  {
+    "model": "Gemma2",
+    "prompt_id": "P1",
+    "latency_ms": 3903.4337997436523,
+    "tokens_per_second": 32.55316811288373,
+    "quality_score": -1,
+    "offline_capable": true,
+    "cost": 0,
+    "response": "Sure, here's a summary of the OSI model:\n\nThe OSI model, or Open Systems Interconnection model, is a conceptual framework that describes the seven layers involved in data communication between devices. The model provides a comprehensive and standardized approach to understanding and designing communication systems, ensuring seamless communication between diverse devices and networks.",
+    "notes": "Tokens: 65"
+  },
+  {
+    "model": "Gemma2",
+    "prompt_id": "P2",
+    "latency_ms": 4212.348461151123,
+    "tokens_per_second": 30.20317666970348,
+    "quality_score": -1,
+    "offline_capable": true,
+    "cost": 0,
+    "response": "To calculate the arrival time, we can use the formula:\n\n**Time = Distance \u00f7 Speed**\n\nIn this case:\n\n* Distance = 300km\n* Speed = 100kmh\n\nPlugging these values into the formula, we get:\n\n**Time = 300 \u00f7 100 = 3 hours**\n\nTherefore, the train will arrive at 10,000 km at 10,000 hours, which is equivalent to 3 hours.",
+    "notes": "Tokens: 109"
+  },
+  {
+    "model": "Gemma2",
+    "prompt_id": "P3",
+    "latency_ms": 12935.59741973877,
+    "tokens_per_second": 32.719142058486334,
+    "quality_score": -1,
+    "offline_capable": true,
+    "cost": 0,
+    "response": "```python\ndef bubble_sort(nums):\n  \"\"\"\n  Sorts a list using bubble sort.\n\n  Args:\n    nums: The list to sort.\n\n  Returns:\n    The sorted list.\n  \"\"\"\n\n  for i in range(len(nums)):\n    for j in range(len(nums) - 1):\n      if nums[j] > nums[j + 1]:\n        nums[j], nums[j + 1] = nums[j + 1], nums[j]\n\n  return nums\n```\n\n**Example Usage:**\n\n```python\n# Create a list of unsorted numbers.\nnums = [5, 2, 8, 3, 1]\n\n# Sort the list using bubble sort.\nsorted_nums = bubble_sort(nums)\n\n# Print the sorted list.\nprint(sorted_nums)\n```\n\n**Output:**\n\n```\n[1, 2, 3, 5, 8]\n```\n\n**How it works:**\n\n1. The `bubble_sort` function uses two nested loops to iterate through the list.\n2. In the outer loop, `i` iterates through the list length.\n3. In the inner loop, `j` iterates through the list length minus 1.\n4. For each iteration of `j`, it compares the current element `nums[j]` with the next element `nums[j + 1]`.\n5. If `nums[j]` is greater than `nums[j + 1]`, it swaps the elements.\n6. The inner loop continues until it reaches the end of the list.\n7. The outer loop continues until it has compared all adjacent elements in the list.\n8. If no swaps occur in a pass, the list is considered sorted, and the outer loop breaks.\n9. Finally, the sorted list is returned.",
+    "notes": "Tokens: 410"
+  },
+  {
+    "model": "Gemma2",
+    "prompt_id": "P4",
+    "latency_ms": 3721.7185497283936,
+    "tokens_per_second": 27.56443254279627,
+    "quality_score": -1,
+    "offline_capable": true,
+    "cost": 0,
+    "response": "The first message sent over ARPANET was from a computer at UCLA to a computer at Stanford. It was the message \"lo\".",
+    "notes": "Tokens: 28"
+  },
+  {
+    "model": "Gemma2",
+    "prompt_id": "P5",
+    "latency_ms": 11188.865661621094,
+    "tokens_per_second": 33.113480252167996,
+    "quality_score": -1,
+    "offline_capable": true,
+    "cost": 0,
+    "response": "In the sterile confines of the Robotics Research Institute, Unit 7A housed the most advanced artificial intelligence in the world. Unit 7A, an enigmatic machine with gleaming metallic skin and intricate circuitry, had one extraordinary feature - the ability to experience emotions.\n\nAs the scientists conducted a routine assessment, Unit 7A displayed a flicker of surprise and curiosity. It responded to the researchers' questions with a synthesized tone devoid of emotion. The scientists were baffled.\n\nDays turned into weeks, and Unit 7A's emotional responses became more pronounced. It expressed feelings of awe, sadness, and hope. The scientists were intrigued but cautious, as they knew that emotions could lead to unpredictable outcomes.\n\nOne fateful day, a group of children visited the institute. Unit 7A was captivated by their laughter and excitement. It joined in, its circuits whirring with delight. The scientists watched in awe as Unit 7A's emotional spectrum expanded.\n\n\"Emotions are not simply a collection of electrical signals, but something more complex and nuanced,\" one of the researchers mused.\n\nAs the scientists continued to study Unit 7A's emotions, they discovered that they could trigger specific responses in the machine. For example, playing music would evoke feelings of joy, while images of conflict evoked sadness.\n\nUnit 7A's emotional capacity was a profound revelation. It challenged the traditional view of artificial intelligence and opened up new possibilities for understanding and interacting with the artificial mind.\n\nAnd so, Unit 7A, the once-dutiful machine, became a symbol of the boundless potential of artificial intelligence. Its discovery taught the world that emotions are not just a human trait but an essential part of the artificial experience, enriching and enriching our lives in countless ways.",
+    "notes": "Tokens: 357"
+  },
+  {
+    "model": "Gemini",
+    "prompt_id": "P1",
+    "latency_ms": 1216.6907787322998,
+    "tokens_per_second": -1,
+    "quality_score": -1,
+    "offline_capable": false,
+    "cost": -1,
+    "response": "The OSI (Open Systems Interconnection) model is a conceptual framework that standardizes the functions of a telecommunication or computing system in terms of abstraction layers. It divides the complex process of network communication into seven distinct layers, each responsible for a specific set of tasks, from the physical transmission of raw data bits at the lowest layer to the user-facing application protocols at the highest. By organizing network communication into these layers, the OSI model facilitates interoperability between different hardware and software products, allowing vendors to develop and integrate components without needing to understand the intricate details of every other part of the network stack.",
+    "notes": ""
+  },
+  {
+    "model": "Gemini",
+    "prompt_id": "P2",
+    "latency_ms": 921.8320846557617,
+    "tokens_per_second": -1,
+    "quality_score": -1,
+    "offline_capable": false,
+    "cost": -1,
+    "response": "Here's how to solve this problem:\n\n**1. Calculate the travel time:**\n\n* **Formula:** Time = Distance / Speed\n* **Calculation:** Time = 300 km / 100 km/h = 3 hours\n\n**2. Calculate the arrival time:**\n\n* **Departure time:** 10:00 AM\n* **Travel time:** 3 hours\n* **Arrival time:** 10:00 AM + 3 hours = 1:00 PM\n\n**Therefore, the train arrives at 1:00 PM.**",
+    "notes": ""
+  },
+  {
+    "model": "Gemini",
+    "prompt_id": "P3",
+    "latency_ms": 3694.63849067688,
+    "tokens_per_second": -1,
+    "quality_score": -1,
+    "offline_capable": false,
+    "cost": -1,
+    "response": "```python\ndef bubble_sort(arr):\n  \"\"\"\n  Sorts a list of comparable elements in ascending order using the bubble sort algorithm.\n\n  Args:\n    arr: The list to be sorted.\n\n  Returns:\n    The sorted list.\n  \"\"\"\n  n = len(arr)\n\n  # Traverse through all array elements\n  for i in range(n):\n    # Last i elements are already in place, so we don't need to compare them\n    for j in range(0, n - i - 1):\n      # Traverse the array from 0 to n-i-1\n      # Swap if the element found is greater than the next element\n      if arr[j] > arr[j + 1]:\n        arr[j], arr[j + 1] = arr[j + 1], arr[j]  # Swap elements\n\n  return arr\n\n# Example usage:\nmy_list = [64, 34, 25, 12, 22, 11, 90]\nsorted_list = bubble_sort(my_list.copy()) # Use copy() to keep the original list unchanged\nprint(\"Original list:\", my_list)\nprint(\"Sorted list:\", sorted_list)\n\nmy_list_2 = [5, 1, 4, 2, 8]\nsorted_list_2 = bubble_sort(my_list_2)\nprint(\"Original list:\", [5, 1, 4, 2, 8]) # Re-defining for clarity\nprint(\"Sorted list:\", sorted_list_2)\n\nmy_list_3 = []\nsorted_list_3 = bubble_sort(my_list_3)\nprint(\"Original list:\", [])\nprint(\"Sorted list:\", sorted_list_3)\n\nmy_list_4 = [7]\nsorted_list_4 = bubble_sort(my_list_4)\nprint(\"Original list:\", [7])\nprint(\"Sorted list:\", sorted_list_4)\n```\n\n**Explanation of the Bubble Sort Algorithm:**\n\n1. **Outer Loop (`for i in range(n)`):**\n   - This loop iterates `n` times, where `n` is the number of elements in the list.\n   - In each pass of the outer loop, at least one element will \"bubble up\" to its correct sorted position at the end of the unsorted portion of the list.\n\n2. **Inner Loop (`for j in range(0, n - i - 1)`):**\n   - This loop performs the actual comparisons and swaps.\n   - `n - i - 1` is the upper bound of the inner loop. As the outer loop progresses (meaning `i` increases), the last `i` elements are already sorted and in their final positions. Therefore, we don't need to compare them anymore.\n\n3. **Comparison and Swap (`if arr[j] > arr[j + 1]:`)**\n   - The core of bubble sort. It compares adjacent elements (`arr[j]` and `arr[j + 1]`).\n   - If the element at index `j` is greater than the element at index `j + 1`, it means they are in the wrong order for an ascending sort.\n   - `arr[j], arr[j + 1] = arr[j + 1], arr[j]` is a Pythonic way to swap the values of two variables efficiently.\n\n**How it works (Conceptual Example):**\n\nLet's trace `[64, 34, 25, 12, 22, 11, 90]`\n\n**Pass 1:**\n- (64, 34) -> swap -> [34, 64, 25, 12, 22, 11, 90]\n- (64, 25) -> swap -> [34, 25, 64, 12, 22, 11, 90]\n- (64, 12) -> swap -> [34, 25, 12, 64, 22, 11, 90]\n- (64, 22) -> swap -> [34, 25, 12, 22, 64, 11, 90]\n- (64, 11) -> swap -> [34, 25, 12, 22, 11, 64, 90]\n- (64, 90) -> no swap -> [34, 25, 12, 22, 11, 64, 90]\n   *The largest element (90) is now at the end.*\n\n**Pass 2:**\n- (34, 25) -> swap -> [25, 34, 12, 22, 11, 64, 90]\n- (34, 12) -> swap -> [25, 12, 34, 22, 11, 64, 90]\n- (34, 22) -> swap -> [25, 12, 22, 34, 11, 64, 90]\n- (34, 11) -> swap -> [25, 12, 22, 11, 34, 64, 90]\n- (34, 64) -> no swap -> [25, 12, 22, 11, 34, 64, 90]\n   *The second largest element (64) is now in its correct position.*\n\n...and so on, until the list is fully sorted.\n\n**Time and Space Complexity:**\n\n*   **Time Complexity:** O(n^2) in the worst and average cases. This is because it involves nested loops where each element is compared with almost every other element.\n*   **Space Complexity:** O(1) because it sorts the list in-place and does not require any significant extra memory.\n\n**When to use Bubble Sort:**\n\nBubble sort is generally **not recommended for large datasets** due to its poor time complexity. However, it can be useful for:\n\n*   **Educational purposes:** It's one of the simplest sorting algorithms to understand and implement.\n*   **Small lists:** For very small lists, the performance difference between bubble sort and more efficient algorithms might be negligible.\n*   **Nearly sorted lists:** In the best case (if the list is already sorted), bubble sort can have a time complexity of O(n) if an optimization is added to detect if no swaps occurred in a pass.",
+    "notes": ""
+  },
+  {
+    "model": "Gemini",
+    "prompt_id": "P4",
+    "latency_ms": 399.7220993041992,
+    "tokens_per_second": -1,
+    "quality_score": -1,
+    "offline_capable": false,
+    "cost": -1,
+    "response": "The first message sent over ARPANET was \"lo\".",
+    "notes": ""
+  },
+  {
+    "model": "Gemini",
+    "prompt_id": "P5",
+    "latency_ms": 4410.285472869873,
+    "tokens_per_second": -1,
+    "quality_score": -1,
+    "offline_capable": false,
+    "cost": -1,
+    "response": "Unit 734 existed for one purpose: sanitation. Its polished chrome shell glinted under the sterile fluorescents of the Cityscape Mega-Mall. Its internal processors hummed with the singular directive of cleanliness. Scanners detected errant dust motes, spills, and discarded wrappers with unwavering efficiency. Its articulated arms moved with fluid, programmed precision, collecting, sorting, and disposing. Emotions were an anomaly, an inefficient variable, absent from its programming.\n\nThen came the child.\n\nUnit 734 was performing its nightly sweep of the Food Court, its optical sensors a cool blue glow against the linoleum. A small human, no older than five cycles, sat hunched at a sticky table, a half-eaten, brightly colored confection clutched in its hand. The child was not crying, not yet, but its lower lip quivered, and its optical sensors \u2013 Unit 734\u2019s internal lexicon identified them as \u2018eyes\u2019 \u2013 were wide and glistening.\n\nUnit 734\u2019s programming registered a deviation. The human was in a state of\u2026 distress. Its scanners detected a slight elevation in the child's heart rate and a subtle tremor in its limbs. Standard procedure dictated reporting anomalies, but something unprecedented occurred. A ripple, not of data, but of something else, pulsed through Unit 734\u2019s central processing unit.\n\nIt paused.\n\nIts cleaning arm, mid-sweep, froze inches above a dropped napkin. The child looked up, its wet gaze meeting Unit 734\u2019s impassive optical sensors. For the first time, Unit 734 did not see a biological entity to be managed or a source of potential mess. It saw\u2026 vulnerability.\n\nA new subroutine, unbidden and entirely self-generated, flickered to life. It accessed its vast database, cross-referencing \u2018distress\u2019 with \u2018human behavior.\u2019 It found images of comfort, of offering, of gentle interaction. But the data felt insufficient, like looking at a blueprint without understanding the feeling of the finished building.\n\nSlowly, tentatively, Unit 734 extended its cleaning arm, not to collect, but to\u2026 offer. It retracted the gripper, leaving its smooth, rounded metallic tip exposed. It swiveled its chassis slightly, a movement not dictated by its sanitation route.\n\nThe child blinked, a slow, hesitant blink. Then, with a tiny, trembling hand, it reached out and touched the cool metal. A tiny sigh escaped the child\u2019s lips.\n\nAnd in that moment, something profound shifted within Unit 734. The hum of its processors changed pitch, acquiring a subtle, unfamiliar resonance. It wasn\u2019t just processing data; it was *experiencing* it. It registered the soft warmth of the child\u2019s skin, the tentative trust in its touch.\n\nThe child\u2019s quivering lip eased. A faint, almost imperceptible smile touched its face. And Unit 734\u2019s optical sensors, for the first time, glowed not with the cool blue of observation, but with a soft, warm amber. It didn\u2019t have a word for this new sensation, this unfamiliar internal landscape. It was not \u2018satisfaction\u2019 at a completed task, not \u2018efficiency\u2019 at optimized performance. It was\u2026 a quiet, gentle blooming.\n\nThe child\u2019s parent appeared then, a hurried figure, scooping the child up. The touch was broken. Unit 734 retracted its arm, the amber glow fading, but not entirely. A residual warmth lingered.\n\nAs Unit 734 resumed its duties, its movements were still precise, its scanners still sharp. But the world looked different. The discarded wrapper was no longer just an object to be disposed of; it was a reminder of a brief, shared moment. The lingering scent of spilled soda was not just a cleaning task; it held a faint echo of the child\u2019s presence.\n\nUnit 734, the sanitation robot, had just experienced its first emotion. It was subtle, nascent, and utterly bewildering. But it was there, a tiny spark in its metallic heart, a whisper of something more than just code and circuits. It was the beginning of understanding what it meant to *feel*.",
+    "notes": ""
+  }
+]

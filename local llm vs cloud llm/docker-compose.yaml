@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  benchmark:
+    build: .
+    volumes:
+      - ./results:/app/results
+      - ollama_data:/root/.ollama
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+volumes:
+  ollama_data:
