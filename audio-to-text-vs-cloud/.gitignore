@@ -1,9 +1,0 @@
-# Ignore results
-results/
-
-# Ignore python cache
-__pycache__/
-*.pyc
-
-# Ignore audio samples
-audio_samples/

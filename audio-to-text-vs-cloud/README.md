@@ -1,31 +1,30 @@
 # Audio-to-Text: Local vs. Cloud Benchmark
 
-This project provides a framework for benchmarking local and cloud-based audio-to-text (ASR) models. It is set up to be run inside a Docker container for portability.
+This project benchmarks a local Whisper model for audio-to-text transcription and compares the results against a fixed set of sample cloud performance data.
+
+It is set up to be run inside a Docker container for portability.
 
 ## How to Run
 
 1.  **Add Audio Samples:**
-    Place the audio files you want to transcribe into the `audio_samples` directory.
+    Place the audio files you want to transcribe into the `audio_samples` directory. The analysis will only compare files that have a matching entry in the `results/cloud_results.json` file.
 
 2.  **Build and Run with Docker:**
     From the `audio-to-text-vs-cloud` directory, run the following command:
     ```bash
     docker-compose up --build
     ```
-    This will build the Docker image, install the dependencies, and run the benchmark and analysis scripts.
+    This will build the Docker image, run the local benchmark, and then generate a comparison report.
 
 ## How it Works
 
 1.  **`benchmark.py`:**
-    - This script uses the `openai-whisper` library to transcribe the audio files in the `audio_samples` directory.
-    - It measures the time taken for each transcription.
-    - The results (filename, transcription, and duration) are saved to `results/results.json`.
-    - Currently, it uses the `base` Whisper model. You can change this in the script.
+    - This script runs a benchmark on your local machine using the open-source `openai-whisper` library (`base` model).
+    - It saves the transcription and performance results to `results/local_results.json`.
 
 2.  **`analyse.py`:**
-    - This script reads the `results.json` file.
-    - It generates a markdown report named `comparison.md` in the `results` directory.
-    - It also creates a bar chart (`latency_comparison.png`) in the `results/charts` directory, visualizing the transcription durations.
+    - This script reads both `results/local_results.json` (from your benchmark) and `results/cloud_results.json` (a static file with example cloud performance).
+    - It combines the data and generates a comparative markdown report (`comparison.md`) and a grouped bar chart (`latency_comparison.png`) to visualize the performance difference.
 
 ## Project Structure
 ```
@@ -35,12 +34,13 @@ This project provides a framework for benchmarking local and cloud-based audio-t
 ├── entrypoint.sh
 ├── requirements.txt
 ├── audio_samples/
-│   └── (your audio files here, e.g., Test .m4a)
+│   └── (your audio files here)
 ├── results/
 │   ├── charts/
 │   │   └── latency_comparison.png
 │   ├── comparison.md
-│   └── results.json
+│   ├── local_results.json
+│   └── cloud_results.json (Static Data)
 └── scripts/
     ├── analyse.py
     └── benchmark.py

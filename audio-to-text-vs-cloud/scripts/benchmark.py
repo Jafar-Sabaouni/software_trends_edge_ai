@@ -8,7 +8,7 @@ from tqdm import tqdm
 # Define paths
 AUDIO_SAMPLES_DIR = "audio_samples"
 RESULTS_DIR = "results"
-RESULTS_FILE = os.path.join(RESULTS_DIR, "results.json")
+RESULTS_FILE = os.path.join(RESULTS_DIR, "local_results.json")
 
 # Create results directory if it doesn't exist
 os.makedirs(RESULTS_DIR, exist_ok=True)
@@ -26,18 +26,12 @@ def get_audio_files():
         print("Please add some audio files to transcribe.")
     return files
 
-def benchmark_local_whisper(audio_files):
+def benchmark_local_whisper(model, audio_files):
     """Benchmark the local Whisper model."""
-    print("Loading Whisper model...")
-    # Using the 'base' model for a balance of speed and accuracy.
-    # Other options: 'tiny', 'small', 'medium', 'large'
-    model = whisper.load_model("base")
-    print("Whisper model loaded.")
-
     results = []
     
     print("Starting local Whisper benchmark...")
-    for audio_file in tqdm(audio_files, desc="Transcribing audio files"):
+    for audio_file in tqdm(audio_files, desc="Transcribing (Local)"):
         audio_path = os.path.join(AUDIO_SAMPLES_DIR, audio_file)
         
         start_time = time.time()
@@ -48,7 +42,7 @@ def benchmark_local_whisper(audio_files):
             duration = end_time - start_time
             
             results.append({
-                "model": "local_whisper_base",
+                "model": "Local Whisper (base)",
                 "file": audio_file,
                 "transcription": result["text"],
                 "duration_seconds": duration
@@ -56,7 +50,7 @@ def benchmark_local_whisper(audio_files):
         except Exception as e:
             print(f"Error transcribing {audio_file}: {e}")
             results.append({
-                "model": "local_whisper_base",
+                "model": "Local Whisper (base)",
                 "file": audio_file,
                 "transcription": "Error",
                 "duration_seconds": -1,
@@ -69,17 +63,20 @@ if __name__ == "__main__":
     audio_files = get_audio_files()
     
     if audio_files:
-        local_results = benchmark_local_whisper(audio_files)
+        print("Loading local Whisper model...")
+        local_model = whisper.load_model("base")
+        print("Whisper model loaded.")
+
+        local_results = benchmark_local_whisper(local_model, audio_files)
         
-        # Save results to JSON
         with open(RESULTS_FILE, "w") as f:
             json.dump(local_results, f, indent=4)
             
-        print(f"Benchmark complete. Results saved to {RESULTS_FILE}")
+        print(f"\nBenchmark complete. Local results saved to {RESULTS_FILE}")
 
-        # Optional: Print results as a table
-        df = pd.DataFrame(local_results)
-        print("\n--- Benchmark Results ---")
-        print(df.to_string())
-        print("-----------------------\n")
+        if local_results:
+            df = pd.DataFrame(local_results)
+            print("\n--- Local Benchmark Results ---")
+            print(df.to_string())
+            print("-------------------------------\n")
 

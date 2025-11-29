@@ -1,0 +1,14 @@
+[
+    {
+        "model": "Local Whisper (base)",
+        "file": "greeting.mp3",
+        "transcription": " Hello, this is a test to test audio to text.",
+        "duration_seconds": 0.9497265815734863
+    },
+    {
+        "model": "Local Whisper (base)",
+        "file": "nonsens.wav",
+        "transcription": " Hallo! Vandaag liepen Rosenkoelkast over straat, terwijl hij een liedje zong over bananen en wiffy-signale. Ondertussen proberen een soupkom, een sollicitatie te doen bij een fabriek die lezers maakt, maar hij wist niet hoe CV's schrijven werkt. Uiteindelijk besloot iedereen dat zwaartekracht vandaag vakantie had en dat stoelen dus mag te vliegen. Aan het einde van de dag dronk de maan een koffie en zij, wow dat was vreemd, maar wel gezellig",
+        "duration_seconds": 4.4776341915130615
+    }
+]
