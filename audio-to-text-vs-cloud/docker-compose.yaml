@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  audio-processing:
+    build: .
+    volumes:
+      - ./audio_samples:/app/audio_samples
+      - ./results:/app/results
+    working_dir: /app
+    command: ["./scripts/benchmark.py"]

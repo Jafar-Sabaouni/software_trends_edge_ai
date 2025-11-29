@@ -1,0 +1,7 @@
+openai-whisper
+pandas
+matplotlib
+tqdm
+requests
+soundfile
+tabulate
